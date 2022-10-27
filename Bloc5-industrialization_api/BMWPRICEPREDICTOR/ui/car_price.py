@@ -4,15 +4,15 @@ import json
 
 
 def main():
-    st.title("CAR PRICE PREDICTOR")
+    st.title("BMW CAR PRICE PREDICTOR")
 
     year = st.number_input("Year")
 
-    mileage = st.number_input("Mileage(in mile)")
+    mileage = st.number_input("Mileage (in mile)")
 
-    price = st.number_input("Price(in £)")
+    price = st.number_input("Price (in £)")
 
-    fuelType = st.selectbox("fuelType", ("Diesel", "Electric", "Hybrid", "Petrol"))
+    fuelType = st.selectbox("Fuel Type", ("Diesel", "Electric", "Hybrid", "Petrol"))
     if fuelType == "Diesel":
         fuelType = 0
     elif fuelType == "Electric":
@@ -30,7 +30,7 @@ def main():
     else:
         transmission = 2
 
-    engineSize = st.number_input("engineSize(in L)")
+    engineSize = st.number_input("Engine Size (in L)")
 
 
     input_data = {
