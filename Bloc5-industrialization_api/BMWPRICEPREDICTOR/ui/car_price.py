@@ -44,7 +44,7 @@ def main():
 
     price = 0
     if st.button("Predict"):
-        price = requests.post(url="http://127.0.0.1:8080/predict", data=json.dumps(input_data))
+        price = requests.post(url="http://127.0.0.1:8000/predict", data=json.dumps(input_data))
         price = price.json()
         p = price['prediction']
         st.success(f'The Price of the Car is {p} £')
