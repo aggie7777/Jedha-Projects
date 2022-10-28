@@ -2,7 +2,6 @@ Instant Machine Learning Web Application with Streamlit and FastAPI
 
 The goal of this project is to build complete end-to-end Regression ML model, Backend RestAPI to serve this model and
 front end UI so end user can interact and use it through web browser. Complete implementation is done Python language. 
-archiBMW
 
 1.  Build ML Model (In my case I did regression model)
 2.  Develop REST API as Backend ( I use FastAPI framework in python)
