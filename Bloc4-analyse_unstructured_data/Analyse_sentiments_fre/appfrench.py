@@ -17,6 +17,19 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re  # regular expression
+# Download dependency
+for dependency in (
+        "brown",
+        "names",
+        "wordnet",
+        "averaged_perceptron_tagger",
+        "universal_tagset",
+):
+    nltk.download(dependency)
+import nltk
+nltk.download('stopwords')
+nltk.download('omw-1.4')
+
 import joblib
 
 import warnings
