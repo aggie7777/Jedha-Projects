@@ -32,4 +32,4 @@ def predict_price(input:Input):
         }
 
 if __name__=="__main__":
-    uvicorn.run(app, host="http://localhost/", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
