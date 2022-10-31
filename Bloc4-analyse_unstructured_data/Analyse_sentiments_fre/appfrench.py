@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 
 # text preprocessing modules
 from string import punctuation
-
+import pickle
 # text preprocessing modules
 from nltk.tokenize import word_tokenize
 
@@ -81,7 +81,9 @@ def make_prediction(Description):
     clean_review = text_cleaning(Description)
 
     # load the model and make prediction
-    model = joblib.load("sentimentsfrench_model_pipeline.pkl")
+    # Reads in saved classification model
+    model = pickle.load(open('sentimentsfrench_model_pipeline.pkl', 'rb'))
+    #model = joblib.load("sentimentsfrench_model_pipeline.pkl")
 
     # make prection
     result = model.predict([clean_review])
