@@ -82,8 +82,8 @@ def make_prediction(Description):
 
     # load the model and make prediction
     # Reads in saved classification model
-    model = pickle.load(open('sentimentsfrench_model_pipeline.pkl', 'rb'))
-    #model = joblib.load("sentimentsfrench_model_pipeline.pkl")
+    #model = pickle.load(open('sentimentsfrench_model_pipeline.pkl', 'rb'))
+    model = joblib.load("sentimentsfrench_model_pipeline.pkl")
 
     # make prection
     result = model.predict([clean_review])
