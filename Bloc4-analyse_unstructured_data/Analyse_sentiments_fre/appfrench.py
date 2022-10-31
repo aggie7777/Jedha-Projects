@@ -63,9 +63,9 @@ def text_cleaning(text, remove_stop_words=True, lemmatize_words=True):
 
 # functon to make prediction
 @st.cache
-def make_prediction(review):
+def make_prediction(Description):
     # clearn the data
-    clean_review = text_cleaning(review)
+    clean_review = text_cleaning(Description)
 
     # load the model and make prediction
     model = joblib.load("sentimentsfrench_model_pipeline.pkl")
