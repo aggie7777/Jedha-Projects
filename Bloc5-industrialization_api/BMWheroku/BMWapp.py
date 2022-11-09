@@ -1,10 +1,7 @@
 import streamlit as st
 import numpy as np
-from pydantic import BaseModel
 import pandas as pd
 import pickle
-import joblib
-from sklearn.tree import DecisionTreeRegressor
 st.title("PRÉDICATEUR DE PRIX DE VOITURE BMW")
 # load model
 #model = DecisionTreeRegressor()
