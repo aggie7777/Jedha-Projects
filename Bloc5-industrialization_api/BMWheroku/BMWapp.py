@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+from sklearn.tree import DecisionTreeRegressor
 st.title("PRÉDICATEUR DE PRIX DE VOITURE BMW")
 # load model
 #model = DecisionTreeRegressor()
