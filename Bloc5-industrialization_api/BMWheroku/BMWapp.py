@@ -14,7 +14,7 @@ st.write("\n\n"*2)
 
 # load model
 @st.cache
-model = pickle.load(open("car_price_predictor_model.pkl",'rb'))
+model = pickle.load(open("car_price_predictor_model.pkl"))
 
 
 with st.sidebar:
