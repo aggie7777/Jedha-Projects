@@ -5,7 +5,7 @@ import pickle
 st.title("PRÉDICATEUR DE PRIX DE VOITURE BMW")
 # load model
 #model = DecisionTreeRegressor()
-model = pickle.load(open("C:/Users/Administrateur/Desktop/car_Api/car_price_predictor_model.pkl",'rb'))
+model = pickle.load(open("car_price_predictor_model.pkl",'rb'))
 #model = joblib.load("C:/Users/Administrateur/Desktop/car_Api/car_price_predictor_model.pkl")
 #Caching the model for faster loading
 #@st.cache
