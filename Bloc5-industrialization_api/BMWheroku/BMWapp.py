@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from sklearn.tree import DecisionTreeRegressor
-st.title("PREDICTION DE PRIX DE VOITURE BMW")
+
 
 # load model
 #model = DecisionTreeRegressor()
@@ -12,6 +12,7 @@ model = pickle.load(open("car_price_predictor_model.pkl",'rb'))
 #Caching the model for faster loading
 #@st.cache
 
+st.title("PREDICTION DE PRIX DE VOITURE BMW")
 with st.sidebar:
     st.subheader('Spécifications de la voiture pour estimer')
 
