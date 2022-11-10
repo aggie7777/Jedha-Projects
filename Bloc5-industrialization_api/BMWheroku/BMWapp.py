@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from sklearn.tree import DecisionTreeRegressor
-st.title("ESTIMATION DE PRIX DE VOITURE BMW")
+st.title("PREDICTION DE PRIX DE VOITURE BMW")
 
 # load model
 #model = DecisionTreeRegressor()
