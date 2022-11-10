@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from sklearn.tree import DecisionTreeRegressor
-st.title("PRÉDICATEUR DE PRIX DE VOITURE BMW")
+st.title("ESTIMATION DE PRIX DE VOITURE BMW")
 
 # load model
 #model = DecisionTreeRegressor()
@@ -13,12 +13,12 @@ model = pickle.load(open("car_price_predictor_model.pkl",'rb'))
 #@st.cache
 
 with st.sidebar:
-    st.subheader('Spécifications de la voiture pour prévoir le prix')
+    st.subheader('Spécifications de la voiture pour estimer')
 
-year = st.sidebar.number_input("Model year:",min_value=1996, max_value=2020, value=1996, step=1)
-mileage = st.sidebar.number_input("km Traveled:",min_value=1000, max_value=200000, value=1000, step=5000)
-price = st.sidebar.number_input("The price at the time of purchase:",min_value=1000, max_value=100000, value=1000, step=1000)
-fuelType = st.sidebar.selectbox("Fuel Type Selection", ("Diesel", "Petrol", "Hybrid", "Electric"))
+year = st.sidebar.number_input("Année:",min_value=1996, max_value=2020, value=1996, step=1)
+mileage = st.sidebar.number_input("Kilométrage:",min_value=1000, max_value=200000, value=1000, step=5000)
+price = st.sidebar.number_input("Prix d'achat:",min_value=1000, max_value=100000, value=1000, step=1000)
+fuelType = st.sidebar.selectbox("Carburant", ("Diesel", "Petrol", "Hybrid", "Electric"))
 if fuelType == "Diesel":
     fuelType = 0
 elif fuelType == "Electric":
@@ -34,7 +34,7 @@ elif transmission == "Semi-Auto":
     transmission = 1
 else:
     transmission = 2
-engineSize = st.sidebar.number_input("Engine Size:",min_value=1.0, max_value=6.0, value=1.0, step=0.5)
+engineSize = st.sidebar.number_input("Moteur en L:",min_value=1.0, max_value=6.0, value=1.0, step=0.5)
 
 input_data = {
         "year": year,
@@ -48,10 +48,10 @@ input_data = {
 df = pd.DataFrame.from_dict([input_data])
 
 cols = {
-    "year": "Année de la voiture",
-    "mileage": "Km parcourus",
+    "year": "Année",
+    "mileage": "Kilométrage",
     "price": "Prix d'achat",
-    "fuelType": "Type de carburant",
+    "fuelType": "Carburant",
     "transmission": "Transmission",
     "engineSize": "La taille du moteur"
 }
